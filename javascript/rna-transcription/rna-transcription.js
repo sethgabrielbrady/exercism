@@ -5,7 +5,6 @@ DnaTranscriber.prototype.toRna = function(dna){
   let rnArray = ['C', 'G', 'A', 'U'];
   let rna = '';
 
-
   for (let i = 0; i<=dna.length; i++){
     let errorCheck = 0;
     for (let j = 0; j<=dnArray.length; j++){
