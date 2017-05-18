@@ -5,9 +5,13 @@
    let rnArray = ['C', 'G', 'A', 'U'];
    let rna = '';
 
-   for (let i = 0; i<=dna.length; i++){//loop through the string
-     for (let j = 0; j<=dnArray.length; j++){ //loop through the dnArray
-       if(dna.charAt(i) === dnArray[j]){ //check the string char against dnArray index
+
+   for (let i = 0; i<=dna.length; i++){
+     let errorCheck = 0;
+     for (let j = 0; j<=dnArray.length; j++){
+       errorCheck ++;
+       if(dna.charAt(i) === dnArray[j]){
+         console.info('Error check', errorCheck);
          rna = rna.concat(rnArray[j]);
          console.info(rna);
        }
@@ -17,3 +21,8 @@
 };
 
 module.exports = DnaTranscriber;
+
+
+// if( error === 4 && dna.charAt(i) !== dnArray[j]) {
+//   throw new Error('Invalid input');
+//  }
